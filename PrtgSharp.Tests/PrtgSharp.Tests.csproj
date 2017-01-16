@@ -69,6 +69,8 @@
     <Compile Include="ChannelProperties\ChannelValueTests.cs" />
     <Compile Include="ChannelProperties\CustomValueUnitPropertyTests.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplaySizePropertyTests.cs" />
+    <Compile Include="ChannelProperties\SpeedValueDisplayTimePropertyTests.cs" />
+    <Compile Include="ChannelProperties\ValueDataTypePropertyTests.cs" />
     <Compile Include="PrtgSensorSuccessResultTests.cs" />
     <Compile Include="SensorErrorTests.cs" />
     <Compile Include="SensorTextTests.cs" />

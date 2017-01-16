@@ -6,7 +6,7 @@ namespace PrtgSharp.ChannelProperties
     internal class ValueDataTypeProperty : ChannelProperty
     {
         public static ValueDataTypeProperty Integer => new ValueDataTypeProperty("0");
-        public static ValueDataTypeProperty Float => new ValueDataTypeProperty("0");
+        public static ValueDataTypeProperty Float => new ValueDataTypeProperty("1");
 
         private ValueDataTypeProperty(string value)
             : base("float", value) { }
