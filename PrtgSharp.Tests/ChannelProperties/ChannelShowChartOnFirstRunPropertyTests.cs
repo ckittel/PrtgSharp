@@ -6,7 +6,6 @@ namespace PrtgSharp.Tests.ChannelProperties
     [TestClass]
     public class ChannelShowChartOnFirstRunPropertyTests : ChannelPropertyTestsBase
     {
-        [TestMethod]
         private static void AssertChannelProp(ChannelProperty channelProp, string value)
         {
             AssertChannelProp(channelProp, "showchart", value);
