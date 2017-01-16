@@ -46,6 +46,7 @@
     <Compile Include="ChannelProperties\Optional\FirstRun\LimitMinWarningOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\Optional\FirstRun\LimitModeOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\Optional\FirstRun\LimitWarningMessageOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\ValueLookupOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\Optional\SpeedValueDisplayTimeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\ValueDataTypeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\VolumeValueDisplaySizeProperty.cs" />

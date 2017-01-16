@@ -8,6 +8,6 @@ namespace PrtgSharp.ChannelProperties.Optional.FirstRun
     public class LimitMinWarningOnFirstRunProperty : ChannelProperty
     {
         public LimitMinWarningOnFirstRunProperty(int upperErrorLimit)
-            : base("LimitMinWarning", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
+            : base("limitminwarning", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
     }
 }

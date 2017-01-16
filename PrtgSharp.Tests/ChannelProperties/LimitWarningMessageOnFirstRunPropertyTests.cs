@@ -11,7 +11,7 @@ namespace PrtgSharp.Tests.ChannelProperties
     {
         private static void AssertChannelProp(ChannelProperty channelProp, string value)
         {
-            AssertChannelProp(channelProp, "LimitWarningMsg", value);
+            AssertChannelProp(channelProp, "limitwarningmsg", value);
         }
 
         [TestMethod]

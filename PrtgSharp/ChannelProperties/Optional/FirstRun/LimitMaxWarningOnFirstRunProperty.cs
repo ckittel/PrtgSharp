@@ -8,6 +8,6 @@ namespace PrtgSharp.ChannelProperties.Optional.FirstRun
     public class LimitMaxWarningOnFirstRunProperty : ChannelProperty
     {
         public LimitMaxWarningOnFirstRunProperty(int upperErrorLimit)
-            : base("LimitMaxWarning", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
+            : base("limitmaxwarning", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
     }
 }

@@ -10,7 +10,7 @@ namespace PrtgSharp.Tests.ChannelProperties
     {
         private static void AssertChannelProp(ChannelProperty channelProp, string value)
         {
-            AssertChannelProp(channelProp, "LimitMaxWarning", value);
+            AssertChannelProp(channelProp, "limitmaxwarning", value);
         }
 
         [TestMethod]

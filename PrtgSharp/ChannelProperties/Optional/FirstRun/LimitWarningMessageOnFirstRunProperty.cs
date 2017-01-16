@@ -8,6 +8,6 @@ namespace PrtgSharp.ChannelProperties.Optional.FirstRun
     public class LimitWarningMessageOnFirstRunProperty : ChannelProperty
     {
         public LimitWarningMessageOnFirstRunProperty(string warningMessage)
-            : base("LimitWarningMsg", warningMessage.TruncateWithEllipsis(256)) { }
+            : base("limitwarningmsg", warningMessage.TruncateWithEllipsis(256)) { }
     }
 }

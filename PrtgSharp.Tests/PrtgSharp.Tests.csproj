@@ -78,6 +78,7 @@
     <Compile Include="ChannelProperties\SpeedValueDisplaySizePropertyTests.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplayTimePropertyTests.cs" />
     <Compile Include="ChannelProperties\ValueDataTypePropertyTests.cs" />
+    <Compile Include="ChannelProperties\ValueLookupOnFirstRunPropertyTests.cs" />
     <Compile Include="ChannelProperties\ValueModePropertyTests.cs" />
     <Compile Include="ChannelProperties\VolumeValueDisplaySizePropertyTests.cs" />
     <Compile Include="PrtgSensorErrorResultTests.cs" />

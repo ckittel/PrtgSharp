@@ -8,6 +8,6 @@ namespace PrtgSharp.ChannelProperties.Optional.FirstRun
     public class LimitMinErrorOnFirstRunProperty : ChannelProperty
     {
         public LimitMinErrorOnFirstRunProperty(int upperErrorLimit)
-            : base("LimitMinError", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
+            : base("limitminerror", upperErrorLimit.ToString(CultureInfo.InvariantCulture)) { }
     }
 }
