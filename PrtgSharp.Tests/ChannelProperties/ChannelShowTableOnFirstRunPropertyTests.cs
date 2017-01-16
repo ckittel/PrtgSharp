@@ -22,7 +22,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         }
 
         [TestMethod]
-        public void Yes_Should_Be_ShowChart_0()
+        public void Yes_Should_Be_ShowTable_0()
         {
             // Act
             var channelProp = ChannelShowTableOnFirstRunProperty.No;
