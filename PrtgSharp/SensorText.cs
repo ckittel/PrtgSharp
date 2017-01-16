@@ -5,7 +5,7 @@ namespace PrtgSharp
 {
     /// <summary>
     /// Text the sensor returns in the Message field with every scanning interval. There can be one message per sensor, regardless of the number of channels.
-    /// Default is "OK." Note: This element has to be provided outside of the <result> element.
+    /// Default is "OK." Note: This element has to be provided outside of the <result/> element.
     /// </summary>
     public class SensorText
     {

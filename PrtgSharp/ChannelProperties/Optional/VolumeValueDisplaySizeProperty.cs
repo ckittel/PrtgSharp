@@ -1,7 +1,9 @@
 ﻿namespace PrtgSharp.ChannelProperties.Optional
 {
     /// <summary>
-    /// 	Size used for the display value. E.g. if you have a value of 50000 and use Kilo as size the display is 50 kilo #. Default is One (value used as returned). For the Bytes and Speed units this is overridden by the setting in the user interface.
+    /// Size used for the display value. E.g. if you have a value of 50000 and use Kilo as 
+    /// size the display is 50 kilo #. Default is One (value used as returned). For the Bytes
+    /// and Speed units this is overridden by the setting in the user interface.
     /// </summary>
     public static class VolumeValueDisplaySizeProperty
     {
