@@ -41,7 +41,7 @@
     <Compile Include="ChannelProperties\ChannelForceWarningProperty.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplayTimeProperty.cs" />
     <Compile Include="ChannelProperties\ValueDataTypeProperty.cs" />
-    <Compile Include="ChannelProperties\VolumeValueDisplaySize.cs" />
+    <Compile Include="ChannelProperties\VolumeValueDisplaySizeProperty.cs" />
     <Compile Include="SensorError.cs" />
     <Compile Include="Utilities\Annotations.cs" />
     <Compile Include="Channel.cs" />
