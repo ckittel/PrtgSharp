@@ -6,45 +6,30 @@ using FluentAssertions;
 
 namespace PrtgSharp.Tests.ChannelProperties
 {
-    [TestClass()]
-    public class ChannelPropertyTests
+    [TestClass]
+    public class ChannelPropertyTests : ChannelPropertyTestsBase
     {
-        [TestMethod()]
-        public void HappyPath_PropChecks()
+        [TestMethod]
+        public void HappyPath()
         {
             // Arrange
             var prop = new ChannelProperty("nAmE", "vAlUe");
 
             // Act / Assert
-            prop.Name.Should().Be("nAmE");
-            prop.Value.Should().Be("vAlUe");
+            AssertChannelProp(prop, "nAmE", "vAlUe");
         }
 
-        [TestMethod()]
-        public void BlankValue_PropChecks()
+        [TestMethod]
+        public void BlankValue()
         {
             // Arrange
             var prop = new ChannelProperty("nAmE", string.Empty);
 
             // Act / Assert
-            prop.Name.Should().Be("nAmE");
-            prop.Value.Should().BeEmpty();
+            AssertChannelProp(prop, "nAmE", string.Empty);
         }
 
-        [TestMethod()]
-        public void HappyPath_Seralizes()
-        {
-            // Arrange
-            var prop = new ChannelProperty("nAmE", "vAlUe");
-
-            // Act
-            var result = prop.ToXElement();
-
-            // Assert
-            result.ToString(SaveOptions.DisableFormatting).Should().Be("<nAmE>vAlUe</nAmE>");
-        }
-
-        [TestMethod()]
+        [TestMethod]
         public void EmptyName_ThrowsException()
         {
             // Arrange
@@ -54,7 +39,7 @@ namespace PrtgSharp.Tests.ChannelProperties
             act.ShouldThrow<ArgumentException>();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void NullName_ThrowsException()
         {
             // Arrange
@@ -64,7 +49,7 @@ namespace PrtgSharp.Tests.ChannelProperties
             act.ShouldThrow<ArgumentNullException>();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void NullValue_ThrowsException()
         {
             // Arrange
@@ -74,20 +59,7 @@ namespace PrtgSharp.Tests.ChannelProperties
             act.ShouldThrow<ArgumentNullException>();
         }
 
-        [TestMethod()]
-        public void ValueEmpty_Seralizes()
-        {
-            // Arrange
-            var prop = new ChannelProperty("name", string.Empty);
-
-            // Act
-            var result = prop.ToXElement();
-
-            // Assert
-            result.ToString(SaveOptions.DisableFormatting).Should().Be("<name></name>");
-        }
-
-        [TestMethod()]
+        [TestMethod]
         public void ValueWithXmlChars_Seralizes()
         {
             // Arrange

@@ -36,7 +36,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChannelProperties\ChannelDefaultShowChartProperty.cs" />
+    <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\ChannelDefaultShowTableProperty.cs" />
     <Compile Include="ChannelProperties\ChannelForceWarningProperty.cs" />
     <Compile Include="ChannelProperties\SensorErrorProperty.cs" />

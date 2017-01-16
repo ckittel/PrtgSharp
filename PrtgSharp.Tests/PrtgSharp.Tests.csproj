@@ -61,6 +61,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ChannelProperties\ChannelPropertyTests.cs" />
+    <Compile Include="ChannelProperties\ChannelPropertyTestsBase.cs" />
+    <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunPropertyTests.cs" />
     <Compile Include="PrtgSensorSuccessResultTests.cs" />
     <Compile Include="SensorTextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

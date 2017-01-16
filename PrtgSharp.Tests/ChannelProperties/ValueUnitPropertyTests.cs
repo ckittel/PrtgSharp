@@ -1,18 +1,15 @@
-﻿using System.Xml.Linq;
-using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PrtgSharp.ChannelProperties;
 
 namespace PrtgSharp.Tests.ChannelProperties
 {
     [TestClass]
-    public class ValueUnitPropertyTests
+    public class ValueUnitPropertyTests : ChannelPropertyTestsBase
     {
+
         private static void AssertChannelProp(ChannelProperty channelProp, string value)
         {
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be(value);
-            channelProp.ToXElement().ToString(SaveOptions.DisableFormatting).Should().Be($"<unit>{value}</unit>");
+            AssertChannelProp(channelProp, "unit", value);
         }
 
         [TestMethod]
