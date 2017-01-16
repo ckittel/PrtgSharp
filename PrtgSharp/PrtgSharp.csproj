@@ -36,27 +36,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\ChannelShowTableOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\ChannelForceWarningProperty.cs" />
-    <Compile Include="ChannelProperties\LimitErrorMessageOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitMaxErrorOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitMaxWarningOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitMinErrorOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitMinWarningOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitModeOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\LimitWarningMessageOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\SpeedValueDisplayTimeProperty.cs" />
-    <Compile Include="ChannelProperties\ValueDataTypeProperty.cs" />
-    <Compile Include="ChannelProperties\VolumeValueDisplaySizeProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\ChannelShowChartOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\ChannelShowTableOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\ChannelForceWarningProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitErrorMessageOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitMaxErrorOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitMaxWarningOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitMinErrorOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitMinWarningOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitModeOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\FirstRun\LimitWarningMessageOnFirstRunProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\SpeedValueDisplayTimeProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\ValueDataTypeProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\VolumeValueDisplaySizeProperty.cs" />
     <Compile Include="SensorError.cs" />
     <Compile Include="Utilities\Annotations.cs" />
     <Compile Include="Channel.cs" />
     <Compile Include="ChannelProperties\ChannelProperty.cs" />
-    <Compile Include="ChannelProperties\ChannelValue.cs" />
+    <Compile Include="ChannelProperties\Required\ChannelValue.cs" />
     <Compile Include="Utilities\Check.cs" />
-    <Compile Include="ChannelProperties\ChannelName.cs" />
-    <Compile Include="ChannelProperties\CustomValueUnitProperty.cs" />
+    <Compile Include="ChannelProperties\Required\ChannelName.cs" />
+    <Compile Include="ChannelProperties\Optional\CustomValueUnitProperty.cs" />
     <Compile Include="IChannel.cs" />
     <Compile Include="IPrtgSensorResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,9 +64,9 @@
     <Compile Include="PrtgSensorSuccessResult.cs" />
     <Compile Include="SensorText.cs" />
     <Compile Include="Utilities\StringExtensions.cs" />
-    <Compile Include="ChannelProperties\ValueModeProperty.cs" />
-    <Compile Include="ChannelProperties\SpeedValueDisplaySizeProperty.cs" />
-    <Compile Include="ChannelProperties\ValueUnitProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\ValueModeProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\SpeedValueDisplaySizeProperty.cs" />
+    <Compile Include="ChannelProperties\Optional\ValueUnitProperty.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

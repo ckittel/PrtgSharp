@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Required
 {
     /// <summary>
     /// This represents <result>...<value>Value</value>...</result>

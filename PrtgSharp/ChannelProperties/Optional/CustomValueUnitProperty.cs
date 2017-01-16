@@ -1,6 +1,6 @@
 ﻿using PrtgSharp.Utilities;
 
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional
 {
     /// <summary>
     /// Optional: Only used when the ValueUnitProperty is Custom.  Limited to 8 chars.

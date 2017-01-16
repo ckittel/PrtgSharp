@@ -1,4 +1,4 @@
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional
 {
     /// <summary>
     /// 	If enabled for at least one channel, the entire sensor is set to warning status. Default is 0 (no).

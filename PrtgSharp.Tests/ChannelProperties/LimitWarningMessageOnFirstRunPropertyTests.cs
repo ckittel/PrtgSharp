@@ -1,6 +1,8 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PrtgSharp.ChannelProperties;
+using PrtgSharp.ChannelProperties.Optional;
+using PrtgSharp.ChannelProperties.Optional.FirstRun;
 
 namespace PrtgSharp.Tests.ChannelProperties
 {

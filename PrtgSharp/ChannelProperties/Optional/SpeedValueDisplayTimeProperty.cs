@@ -1,4 +1,4 @@
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional
 {
     public static class SpeedValueDisplayTimeProperty
     {

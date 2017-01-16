@@ -1,4 +1,4 @@
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional
 {
     /// <summary>
     /// Define if the value is a float. Default is 0 (no). If set to 1 (yes), use a dot as decimal separator in values. Note: Define decimal places with the <DecimalMode> element.

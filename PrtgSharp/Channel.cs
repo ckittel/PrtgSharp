@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using PrtgSharp.ChannelProperties;
+using PrtgSharp.ChannelProperties.Optional;
+using PrtgSharp.ChannelProperties.Required;
 
 namespace PrtgSharp
 {

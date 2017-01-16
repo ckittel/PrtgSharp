@@ -1,4 +1,4 @@
-﻿namespace PrtgSharp.ChannelProperties
+﻿namespace PrtgSharp.ChannelProperties.Required
 {
     /// <summary>
     /// This represents <result><channel>Value</channel>...</result>

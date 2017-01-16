@@ -1,4 +1,4 @@
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional
 {
     /// <summary>
     /// Selects if the value is a absolute value or counter. Default is Absolute.

@@ -1,4 +1,4 @@
-namespace PrtgSharp.ChannelProperties
+namespace PrtgSharp.ChannelProperties.Optional.FirstRun
 {
     /// <summary>
     /// Default value for the Show in Graph option. Default is 1 (yes). 
