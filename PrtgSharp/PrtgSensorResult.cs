@@ -68,18 +68,18 @@ namespace PrtgSharp
         private PrtgSensorErrorResult ValidateOrGetErrorResult()
         {
             if (Channels != null)
-            { 
+            {
+                if (Channels.Count() > MaxNumberOfChannels)
+                {
+                    return PrtgSensorResult.Failed($"Cannot have more than {MaxNumberOfChannels} channels defined for a sensor; this sensor has {Channels.Count()}.");
+                }
+
                 var duplicates = GetDuplicateChannels();
                 if (duplicates.Any())
                 {
                     var channelNames = string.Join(", ", duplicates);
 
                     return PrtgSensorResult.Failed($"One or more channels were included multiple times in this sensor.  Duplicate channels: {channelNames}");
-                }
-
-                if (Channels.Count() > MaxNumberOfChannels)
-                {
-                    return PrtgSensorResult.Failed($"Cannot have more than {MaxNumberOfChannels} channels defined for a sensor; this sensor has {Channels.Count()}.");
                 }
             }
 
