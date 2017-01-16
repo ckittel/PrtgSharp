@@ -1,20 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System.CodeDom;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using PrtgSharp.ChannelProperties;
 
 namespace PrtgSharp
 {
-    public class PrtgSensorErrorResult : PrtgSensorResult
+    public class PrtgSensorErrorResult : IPrtgSensorResult
     {
-        public PrtgSensorErrorResult(SensorText text)
-            : base(text) { }
+        public SensorText Text { get; }
 
         public PrtgSensorErrorResult(string sensorErrorMessage)
-            : this(new SensorText(sensorErrorMessage)) { }
-
-        protected override IEnumerable<XElement> SerializeResult()
         {
-            return new []{ new SensorError().ToXElement() };
+            Text = new SensorText(sensorErrorMessage);
+        }
+
+        public XElement Serialize()
+        {
+            return new XElement("prtg",
+                Text?.ToXElement(),
+                new SensorError().ToXElement());
         }
     }
 }

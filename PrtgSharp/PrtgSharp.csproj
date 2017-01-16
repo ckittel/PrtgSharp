@@ -54,7 +54,6 @@
     <Compile Include="IPrtgSensorResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrtgSensorErrorResult.cs" />
-    <Compile Include="PrtgSensorResult.cs" />
     <Compile Include="PrtgSensorSuccessResult.cs" />
     <Compile Include="SensorText.cs" />
     <Compile Include="Utilities\StringExtensions.cs" />

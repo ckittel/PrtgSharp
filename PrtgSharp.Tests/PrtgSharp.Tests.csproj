@@ -73,6 +73,7 @@
     <Compile Include="ChannelProperties\ValueDataTypePropertyTests.cs" />
     <Compile Include="ChannelProperties\ValueModePropertyTests.cs" />
     <Compile Include="ChannelProperties\VolumeValueDisplaySizePropertyTests.cs" />
+    <Compile Include="PrtgSensorErrorResultTests.cs" />
     <Compile Include="PrtgSensorSuccessResultTests.cs" />
     <Compile Include="SensorErrorTests.cs" />
     <Compile Include="SensorTextTests.cs" />

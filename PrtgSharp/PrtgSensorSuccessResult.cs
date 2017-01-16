@@ -5,11 +5,19 @@ using System.Xml.Linq;
 
 namespace PrtgSharp
 {
-    public class PrtgSensorSuccessResult : PrtgSensorResult
+    public class PrtgSensorSuccessResult : IPrtgSensorResult
     {
+        public SensorText Text { get; }
+
+        public IEnumerable<IChannel> Channels { get; }
+
+        private const int MaxNumberOfChannels = 50;
 
         private PrtgSensorSuccessResult(SensorText text, IEnumerable<IChannel> channels)
-            : base(text, channels) { }
+        {
+            Text = text;
+            Channels = channels;
+        }
 
         public PrtgSensorSuccessResult(IEnumerable<IChannel> channels)
             : this ((SensorText)null, channels) { }
@@ -20,9 +28,47 @@ namespace PrtgSharp
         public PrtgSensorSuccessResult(string sensorMessage)
             : this(sensorMessage, null) { }
 
-        protected override IEnumerable<XElement> SerializeResult()
+        public XElement Serialize()
         {
-            return Channels?.Select(r => r.ToResultElement());
+            var errorResult = ValidateOrGetErrorResult();
+
+            if (errorResult != null)
+            {
+                return errorResult.Serialize();
+            }
+
+            return new XElement("prtg",
+                Text?.ToXElement(),
+                Channels?.Select(r => r.ToResultElement()));
+        }
+
+        private PrtgSensorErrorResult ValidateOrGetErrorResult()
+        {
+            if (Channels != null)
+            {
+                if (Channels.Count() > MaxNumberOfChannels)
+                {
+                    return new PrtgSensorErrorResult($"Cannot have more than {MaxNumberOfChannels} channels defined for a sensor; this sensor has {Channels.Count()}.");
+                }
+
+                var duplicates = GetDuplicateChannels();
+                if (duplicates.Any())
+                {
+                    var channelNames = string.Join(", ", duplicates);
+
+                    return new PrtgSensorErrorResult($"One or more channels were included multiple times in this sensor.  Duplicate channels: {channelNames}");
+                }
+            }
+
+            return null;
+        }
+
+        private List<string> GetDuplicateChannels()
+        {
+            return Channels.GroupBy(r => r.Name, StringComparer.OrdinalIgnoreCase)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
         }
     }
 }
