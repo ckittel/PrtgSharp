@@ -10,7 +10,4 @@ namespace PrtgSharp.ChannelProperties
 
         private static ChannelProperty ShowTable(string value) => new ChannelProperty("showtable", value);
     }
-
-
-
 }

@@ -58,7 +58,7 @@ namespace PrtgSharp.Tests
             var serializedResult = result.Serialize();
 
             // Assert
-            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><result><Channel>chan</Channel><Value>40</Value></result></prtg>");
+            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><result><channel>chan</channel><Value>40</Value></result></prtg>");
         }
 
         [TestMethod()]
@@ -72,7 +72,7 @@ namespace PrtgSharp.Tests
             var serializedResult = result.Serialize();
 
             // Assert
-            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><text>sensor message</text><result><Channel>chan</Channel><Value>40</Value></result></prtg>");
+            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><text>sensor message</text><result><channel>chan</channel><Value>40</Value></result></prtg>");
         }
 
         [TestMethod()]
@@ -86,7 +86,7 @@ namespace PrtgSharp.Tests
             var serializedResult = result.Serialize();
 
             // Assert
-            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><text>sensor message</text><result><Channel>chan0</Channel><Value>10</Value></result><result><Channel>chan1</Channel><Value>20</Value></result></prtg>");
+            serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg><text>sensor message</text><result><channel>chan0</channel><Value>10</Value></result><result><channel>chan1</channel><Value>20</Value></result></prtg>");
         }
 
         [TestMethod()]

@@ -61,6 +61,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ChannelProperties\ChannelForceWarningPropertyTests.cs" />
+    <Compile Include="ChannelProperties\ChannelNameTests.cs" />
     <Compile Include="ChannelProperties\ChannelPropertyTests.cs" />
     <Compile Include="ChannelProperties\ChannelPropertyTestsBase.cs" />
     <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunPropertyTests.cs" />
