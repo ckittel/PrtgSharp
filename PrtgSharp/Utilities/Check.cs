@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using JetBrains.Annotations;
 
 namespace PrtgSharp.Utilities
@@ -20,57 +18,13 @@ namespace PrtgSharp.Utilities
             return value;
         }
 
-        [ContractAnnotation("value:null => halt")]
-        public static T NotNull<T>([NoEnumeration] T value, [InvokerParameterName, NotNull] string parameterName, [NotNull] string propertyName)
-        {
-            if (ReferenceEquals(value, null))
-            {
-                NotEmpty(parameterName, nameof(parameterName));
-                NotEmpty(propertyName, nameof(propertyName));
-
-                throw new ArgumentException("Argument Property Null");
-            }
-
-            return value;
-        }
-
-        [ContractAnnotation("value:null => halt")]
-        public static IReadOnlyList<T> NotEmpty<T>(IReadOnlyList<T> value, [InvokerParameterName, NotNull] string parameterName)
-        {
-            NotNull(value, parameterName);
-
-            if (value.Count == 0)
-            {
-                NotEmpty(parameterName, nameof(parameterName));
-
-                throw new ArgumentException("Collection is empty");
-            }
-
-            return value;
-        }
-
         public static string NullButNotEmpty(string value, [InvokerParameterName, NotNull] string parameterName)
         {
             if (!ReferenceEquals(value, null) && (value.Length == 0))
             {
                 NotEmpty(parameterName, nameof(parameterName));
 
-                throw new ArgumentException("Argument is empty");
-            }
-
-            return value;
-        }
-
-        public static IReadOnlyList<T> HasNoNulls<T>(IReadOnlyList<T> value, [InvokerParameterName, NotNull] string parameterName) 
-            where T : class
-        {
-            NotNull(value, parameterName);
-
-            if (value.Any(e => e == null))
-            {
-                NotEmpty(parameterName, nameof(parameterName));
-
-                throw new ArgumentException(parameterName);
+                throw new ArgumentException($"The string argument '{parameterName}' cannot be empty.");
             }
 
             return value;
@@ -86,7 +40,7 @@ namespace PrtgSharp.Utilities
             }
             else if (value.Trim().Length == 0)
             {
-                e = new ArgumentException("Arg is empty");
+                e = new ArgumentException($"The string argument '{parameterName}' cannot be empty.");
             }
 
             if (e != null)

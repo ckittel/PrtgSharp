@@ -1,12 +1,20 @@
-﻿using FluentAssertions;
+﻿using System.Xml.Linq;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PrtgSharp.ChannelProperties;
 
-namespace PrtgSharp.Tests
+namespace PrtgSharp.Tests.ChannelProperties
 {
     [TestClass]
-    public class ValueUnitTests
+    public class ValueUnitPropertyTests
     {
+        private static void AssertChannelProp(ChannelProperty channelProp, string value)
+        {
+            channelProp.Name.Should().Be("unit");
+            channelProp.Value.Should().Be(value);
+            channelProp.ToXElement().ToString(SaveOptions.DisableFormatting).Should().Be($"<unit>{value}</unit>");
+        }
+
         [TestMethod]
         public void BytesBandwidth_Should_Be_Unit_BytesBandwidth()
         {
@@ -14,8 +22,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.BytesBandwidth;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("BytesBandwidth");
+            AssertChannelProp(channelProp, "BytesBandwidth");
         }
         
         [TestMethod]
@@ -25,8 +32,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.BytesMemory;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("BytesMemory");
+            AssertChannelProp(channelProp, "BytesMemory");
         }
 
 
@@ -37,8 +43,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.BytesDisk;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("BytesDisk");
+            AssertChannelProp(channelProp, "BytesDisk");
         }
 
 
@@ -49,8 +54,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.Temperature;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("Temperature");
+            AssertChannelProp(channelProp, "Temperature");
         }
 
 
@@ -61,8 +65,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.Percent;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("Percent");
+            AssertChannelProp(channelProp, "Percent");
         }
 
 
@@ -73,8 +76,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.TimeResponse;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("TimeResponse");
+            AssertChannelProp(channelProp, "TimeResponse");
         }
 
 
@@ -85,8 +87,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.TimeSeconds;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("TimeSeconds");
+            AssertChannelProp(channelProp, "TimeSeconds");
         }
 
 
@@ -97,8 +98,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.Custom;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("Custom");
+            AssertChannelProp(channelProp, "Custom");
         }
 
 
@@ -109,8 +109,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.Count;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("Count");
+            AssertChannelProp(channelProp, "Count");
         }
 
         [TestMethod]
@@ -120,8 +119,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.Cpu;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("CPU");
+            AssertChannelProp(channelProp, "CPU");
         }
 
 
@@ -132,8 +130,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.BytesFile;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("BytesFile");
+            AssertChannelProp(channelProp, "BytesFile");
         }
 
 
@@ -144,8 +141,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.SpeedDisk;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("SpeedDisk");
+            AssertChannelProp(channelProp, "SpeedDisk");
         }
 
 
@@ -156,8 +152,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.SpeedNet;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("SpeedNet");
+            AssertChannelProp(channelProp, "SpeedNet");
         }
 
 
@@ -168,8 +163,7 @@ namespace PrtgSharp.Tests
             var channelProp = ValueUnitProperty.TimeHours;
 
             // Assert
-            channelProp.Name.Should().Be("unit");
-            channelProp.Value.Should().Be("TimeHours");
+            AssertChannelProp(channelProp, "TimeHours");
         }
     }
 }

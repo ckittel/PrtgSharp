@@ -20,6 +20,10 @@ namespace PrtgSharp
 
         public XElement ToXElement()
         {
+            if (string.IsNullOrEmpty(Message))
+            {
+                return null;
+            }
             return new XElement("text", Message);
         } 
     }

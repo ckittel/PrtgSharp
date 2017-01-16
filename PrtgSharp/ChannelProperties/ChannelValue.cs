@@ -8,7 +8,7 @@ namespace PrtgSharp.ChannelProperties
     internal class ChannelValue : ChannelProperty
     {
         private ChannelValue(string value)
-            : base("value", value) { }
+            : base("Value", value) { }
 
         public static ChannelValue From(float value)
         {

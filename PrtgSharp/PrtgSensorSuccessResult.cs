@@ -8,7 +8,7 @@ namespace PrtgSharp
     public class PrtgSensorSuccessResult : PrtgSensorResult
     {
 
-        public PrtgSensorSuccessResult(SensorText text, IEnumerable<IChannel> channels)
+        private PrtgSensorSuccessResult(SensorText text, IEnumerable<IChannel> channels)
             : base(text, channels) { }
 
         public PrtgSensorSuccessResult(IEnumerable<IChannel> channels)

@@ -6,6 +6,6 @@
     internal class ChannelName : ChannelProperty
     {
         public ChannelName(string name)
-            : base("channel", name) { }
+            : base("Channel", name) { }
     }
 }
