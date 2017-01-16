@@ -11,15 +11,15 @@
         public static ChannelProperty Giga => VolumeSize("Giga");
         public static ChannelProperty Tera => VolumeSize("Tera");
         public static ChannelProperty Byte => VolumeSize("Byte");
-        public static ChannelProperty KiloByte => VolumeSize("KiloByte");
-        public static ChannelProperty MegaByte => VolumeSize("MegaByte");
-        public static ChannelProperty GigaByte => VolumeSize("GigaByte");
-        public static ChannelProperty TeraByte => VolumeSize("TeraByte");
+        public static ChannelProperty Kilobyte => VolumeSize("KiloByte");
+        public static ChannelProperty Megabyte => VolumeSize("MegaByte");
+        public static ChannelProperty Gigabyte => VolumeSize("GigaByte");
+        public static ChannelProperty Terabyte => VolumeSize("TeraByte");
         public static ChannelProperty Bit => VolumeSize("Bit");
-        public static ChannelProperty KiloBit => VolumeSize("KiloBit");
-        public static ChannelProperty MegaBit => VolumeSize("MegaBit");
-        public static ChannelProperty GigaBit => VolumeSize("GigaBit");
-        public static ChannelProperty TeraBit => VolumeSize("TeraBit");
+        public static ChannelProperty Kilobit => VolumeSize("KiloBit");
+        public static ChannelProperty Megabit => VolumeSize("MegaBit");
+        public static ChannelProperty Gigabit => VolumeSize("GigaBit");
+        public static ChannelProperty Terabit => VolumeSize("TeraBit");
 
         private static ChannelProperty VolumeSize(string value) => new ChannelProperty("volumesize", value);
     }

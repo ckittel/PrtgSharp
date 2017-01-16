@@ -77,7 +77,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void KiloByte_Should_Be_VolumeSize_KiloByte()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.KiloByte;
+            var channelProp = VolumeValueDisplaySizeProperty.Kilobyte;
 
             // Assert
             AssertChannelProp(channelProp, "KiloByte");
@@ -87,7 +87,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void MegaByte_Should_Be_VolumeSize_MegaByte()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.MegaByte;
+            var channelProp = VolumeValueDisplaySizeProperty.Megabyte;
 
             // Assert
             AssertChannelProp(channelProp, "MegaByte");
@@ -97,7 +97,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void GigaByte_Should_Be_VolumeSize_GigaByte()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.GigaByte;
+            var channelProp = VolumeValueDisplaySizeProperty.Gigabyte;
 
             // Assert
             AssertChannelProp(channelProp, "GigaByte");
@@ -107,7 +107,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void TeraByte_Should_Be_VolumeSize_TeraByte()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.TeraByte;
+            var channelProp = VolumeValueDisplaySizeProperty.Terabyte;
 
             // Assert
             AssertChannelProp(channelProp, "TeraByte");
@@ -127,7 +127,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void KiloBit_Should_Be_VolumeSize_KiloBit()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.KiloBit;
+            var channelProp = VolumeValueDisplaySizeProperty.Kilobit;
 
             // Assert
             AssertChannelProp(channelProp, "KiloBit");
@@ -137,7 +137,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void MegaBit_Should_Be_VolumeSize_MegaBit()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.MegaBit;
+            var channelProp = VolumeValueDisplaySizeProperty.Megabit;
 
             // Assert
             AssertChannelProp(channelProp, "MegaBit");
@@ -147,7 +147,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void GigaBit_Should_Be_VolumeSize_GigaBit()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.GigaBit;
+            var channelProp = VolumeValueDisplaySizeProperty.Gigabit;
 
             // Assert
             AssertChannelProp(channelProp, "GigaBit");
@@ -157,7 +157,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void TeraBit_Should_Be_VolumeSize_TeraBit()
         {
             // Act
-            var channelProp = VolumeValueDisplaySizeProperty.TeraBit;
+            var channelProp = VolumeValueDisplaySizeProperty.Terabit;
 
             // Assert
             AssertChannelProp(channelProp, "TeraBit");

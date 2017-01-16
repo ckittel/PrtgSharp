@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,6 +52,7 @@
     <Compile Include="ChannelProperties\Optional\SpeedValueDisplayTimeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\ValueDataTypeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\VolumeValueDisplaySizeProperty.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="SensorError.cs" />
     <Compile Include="Utilities\Annotations.cs" />
     <Compile Include="Channel.cs" />
@@ -69,6 +71,9 @@
     <Compile Include="ChannelProperties\Optional\ValueModeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\SpeedValueDisplaySizeProperty.cs" />
     <Compile Include="ChannelProperties\Optional\ValueUnitProperty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

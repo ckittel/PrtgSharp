@@ -77,7 +77,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void KiloByte_Should_Be_SpeedSize_KiloByte()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.KiloByte;
+            var channelProp = SpeedValueDisplaySizeProperty.Kilobyte;
 
             // Assert
             AssertChannelProp(channelProp, "KiloByte");
@@ -87,7 +87,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void MegaByte_Should_Be_SpeedSize_MegaByte()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.MegaByte;
+            var channelProp = SpeedValueDisplaySizeProperty.Megabyte;
 
             // Assert
             AssertChannelProp(channelProp, "MegaByte");
@@ -97,7 +97,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void GigaByte_Should_Be_SpeedSize_GigaByte()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.GigaByte;
+            var channelProp = SpeedValueDisplaySizeProperty.Gigabyte;
 
             // Assert
             AssertChannelProp(channelProp, "GigaByte");
@@ -107,7 +107,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void TeraByte_Should_Be_SpeedSize_TeraByte()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.TeraByte;
+            var channelProp = SpeedValueDisplaySizeProperty.Terabyte;
 
             // Assert
             AssertChannelProp(channelProp, "TeraByte");
@@ -127,7 +127,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void KiloBit_Should_Be_SpeedSize_KiloBit()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.KiloBit;
+            var channelProp = SpeedValueDisplaySizeProperty.Kilobit;
 
             // Assert
             AssertChannelProp(channelProp, "KiloBit");
@@ -137,7 +137,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void MegaBit_Should_Be_SpeedSize_MegaBit()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.MegaBit;
+            var channelProp = SpeedValueDisplaySizeProperty.Megabit;
 
             // Assert
             AssertChannelProp(channelProp, "MegaBit");
@@ -147,7 +147,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void GigaBit_Should_Be_SpeedSize_GigaBit()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.GigaBit;
+            var channelProp = SpeedValueDisplaySizeProperty.Gigabit;
 
             // Assert
             AssertChannelProp(channelProp, "GigaBit");
@@ -157,7 +157,7 @@ namespace PrtgSharp.Tests.ChannelProperties
         public void TeraBit_Should_Be_SpeedSize_TeraBit()
         {
             // Act
-            var channelProp = SpeedValueDisplaySizeProperty.TeraBit;
+            var channelProp = SpeedValueDisplaySizeProperty.Terabit;
 
             // Assert
             AssertChannelProp(channelProp, "TeraBit");

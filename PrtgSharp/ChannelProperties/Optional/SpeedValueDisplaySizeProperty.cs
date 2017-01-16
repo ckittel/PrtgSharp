@@ -11,15 +11,15 @@ namespace PrtgSharp.ChannelProperties.Optional
         public static ChannelProperty Giga => SpeedSize("Giga");
         public static ChannelProperty Tera => SpeedSize("Tera");
         public static ChannelProperty Byte => SpeedSize("Byte");
-        public static ChannelProperty KiloByte => SpeedSize("KiloByte");
-        public static ChannelProperty MegaByte => SpeedSize("MegaByte");
-        public static ChannelProperty GigaByte => SpeedSize("GigaByte");
-        public static ChannelProperty TeraByte => SpeedSize("TeraByte");
+        public static ChannelProperty Kilobyte => SpeedSize("KiloByte");
+        public static ChannelProperty Megabyte => SpeedSize("MegaByte");
+        public static ChannelProperty Gigabyte => SpeedSize("GigaByte");
+        public static ChannelProperty Terabyte => SpeedSize("TeraByte");
         public static ChannelProperty Bit => SpeedSize("Bit");
-        public static ChannelProperty KiloBit => SpeedSize("KiloBit");
-        public static ChannelProperty MegaBit => SpeedSize("MegaBit");
-        public static ChannelProperty GigaBit => SpeedSize("GigaBit");
-        public static ChannelProperty TeraBit => SpeedSize("TeraBit");
+        public static ChannelProperty Kilobit => SpeedSize("KiloBit");
+        public static ChannelProperty Megabit => SpeedSize("MegaBit");
+        public static ChannelProperty Gigabit => SpeedSize("GigaBit");
+        public static ChannelProperty Terabit => SpeedSize("TeraBit");
 
         private static ChannelProperty SpeedSize(string value) => new ChannelProperty("speedsize", value);
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PrtgSharp.Core</id>
+    <version>0.9.0.0</version>
+    <title>PrtgSharp.Core</title>
+    <authors>Chad Kittel</authors>
+    <owners>ckittel</owners>
+    <licenseUrl>https://github.com/ckittel/PrtgSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ckittel/PrtgSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library to help form valid PRTG XML responses in Advanced EXE and HTTP responses</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>monitoring prtg xml</tags>
+  </metadata>
+</package>
