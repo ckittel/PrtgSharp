@@ -39,10 +39,10 @@
     <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\ChannelShowTableOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\ChannelForceWarningProperty.cs" />
-    <Compile Include="ChannelProperties\SensorErrorProperty.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplayTimeProperty.cs" />
     <Compile Include="ChannelProperties\ValueDataTypeProperty.cs" />
     <Compile Include="ChannelProperties\VolumeValueDisplaySize.cs" />
+    <Compile Include="SensorError.cs" />
     <Compile Include="Utilities\Annotations.cs" />
     <Compile Include="Channel.cs" />
     <Compile Include="ChannelProperties\ChannelProperty.cs" />

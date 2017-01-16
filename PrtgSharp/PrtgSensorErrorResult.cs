@@ -14,7 +14,7 @@ namespace PrtgSharp
 
         protected override IEnumerable<XElement> SerializeResult()
         {
-            return new []{ SensorErrorProperty.Yes.ToXElement() };
+            return new []{ new SensorError().ToXElement() };
         }
     }
 }
