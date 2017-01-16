@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunProperty.cs" />
-    <Compile Include="ChannelProperties\ChannelDefaultShowTableProperty.cs" />
+    <Compile Include="ChannelProperties\ChannelShowTableOnFirstRunProperty.cs" />
     <Compile Include="ChannelProperties\ChannelForceWarningProperty.cs" />
     <Compile Include="ChannelProperties\SensorErrorProperty.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplayTimeProperty.cs" />
