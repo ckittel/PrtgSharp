@@ -75,6 +75,7 @@
     <Compile Include="ChannelProperties\LimitMinWarningOnFirstRunPropertyTests.cs" />
     <Compile Include="ChannelProperties\LimitModeOnFirstRunPropertyTests.cs" />
     <Compile Include="ChannelProperties\LimitWarningMessageOnFirstRunPropertyTests.cs" />
+    <Compile Include="ChannelProperties\NotifyChangedPropertyTests.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplaySizePropertyTests.cs" />
     <Compile Include="ChannelProperties\SpeedValueDisplayTimePropertyTests.cs" />
     <Compile Include="ChannelProperties\ValueDataTypePropertyTests.cs" />
