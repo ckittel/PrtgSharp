@@ -13,6 +13,6 @@ namespace PrtgSharp.ChannelProperties.Optional.FirstRun
     public class LimitErrorMessageOnFirstRunProperty : ChannelProperty
     {
         public LimitErrorMessageOnFirstRunProperty(string errorMessage)
-            : base("LimitErrorMsg", errorMessage.TruncateWithEllipsis(256)) { }
+            : base("limiterrormsg", errorMessage.TruncateWithEllipsis(256)) { }
     }
 }
