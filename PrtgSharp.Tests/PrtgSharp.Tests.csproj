@@ -67,6 +67,7 @@
     <Compile Include="ChannelProperties\ChannelShowChartOnFirstRunPropertyTests.cs" />
     <Compile Include="ChannelProperties\ChannelShowTableOnFirstRunPropertyTests.cs" />
     <Compile Include="ChannelProperties\ChannelValueTests.cs" />
+    <Compile Include="ChannelProperties\CustomValueUnitPropertyTests.cs" />
     <Compile Include="PrtgSensorSuccessResultTests.cs" />
     <Compile Include="SensorTextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
