@@ -4,7 +4,7 @@ namespace PrtgSharp
 {
     public interface IPrtgSensorResult
     {
-        XElement Serialize();
+        XElement SerializeToXElement();
         SensorText Text { get; }
     }
 }

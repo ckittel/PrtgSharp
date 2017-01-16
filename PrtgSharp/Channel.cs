@@ -50,7 +50,7 @@ namespace PrtgSharp
             return source?.Concat(new[] { dataTypeProperty });
         }
 
-        public XElement ToResultElement()
+        public XElement ToXElement()
         {
             return new XElement("result", _name.ToXElement(), 
                 _value.ToXElement(),

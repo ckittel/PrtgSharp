@@ -15,7 +15,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("sensor message");
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg><text>sensor message</text></prtg>");
@@ -28,7 +28,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult((string)null);
 
             // Act
-            var serializedResult = result.Serialize();
+            var serializedResult = result.SerializeToXElement();
 
             // Assert
             serializedResult.ToString(SaveOptions.DisableFormatting).Should().Be("<prtg />");
@@ -41,7 +41,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult(string.Empty);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg />");
@@ -55,7 +55,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult(new [] { channel });
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg><result><channel>chan</channel><value>40</value></result></prtg>");
@@ -69,7 +69,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("sensor message", new[] { channel });
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg><text>sensor message</text><result><channel>chan</channel><value>40</value></result></prtg>");
@@ -83,7 +83,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("sensor message", channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg><text>sensor message</text><result><channel>chan0</channel><value>10</value></result><result><channel>chan1</channel><value>20</value></result></prtg>");
@@ -96,7 +96,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("sensor message", null);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg><text>sensor message</text></prtg>");
@@ -109,7 +109,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult(null, null);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().Be("<prtg />");
@@ -127,7 +127,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult(null, channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting);
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
 
             // Assert
             serializedResult.Should().MatchRegex(@"<prtg>(<result><channel>chan\d{1,2}</channel><value>0</value></result>){50}</prtg>");
@@ -145,7 +145,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("won't see me", channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting); ;
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting); ;
 
             // Assert
             serializedResult.Should().Be("<prtg><text>Cannot have more than 50 channels defined for a sensor; this sensor has 51.</text><error>1</error></prtg>");
@@ -159,7 +159,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("won't see me", channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting); ;
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting); ;
 
             // Assert
             serializedResult.Should().Be("<prtg><text>One or more channels were included multiple times in this sensor.  Duplicate channels: A</text><error>1</error></prtg>");
@@ -180,7 +180,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("won't see me", channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting); ;
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting); ;
 
             // Assert
             serializedResult.Should().Be("<prtg><text>One or more channels were included multiple times in this sensor.  Duplicate channels: A, B</text><error>1</error></prtg>");
@@ -199,7 +199,7 @@ namespace PrtgSharp.Tests
             var result = new PrtgSensorSuccessResult("won't see me", channels);
 
             // Act
-            var serializedResult = result.Serialize().ToString(SaveOptions.DisableFormatting); ;
+            var serializedResult = result.SerializeToXElement().ToString(SaveOptions.DisableFormatting); ;
 
             // Assert
             serializedResult.Should().MatchRegex("<prtg><text>One or more channels were included multiple times in this sensor.  Duplicate channels: [Aa], [Bb]</text><error>1</error></prtg>");

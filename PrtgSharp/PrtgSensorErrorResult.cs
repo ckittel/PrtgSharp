@@ -14,7 +14,7 @@ namespace PrtgSharp
             Text = new SensorText(sensorErrorMessage);
         }
 
-        public XElement Serialize()
+        public XElement SerializeToXElement()
         {
             return new XElement("prtg",
                 Text?.ToXElement(),

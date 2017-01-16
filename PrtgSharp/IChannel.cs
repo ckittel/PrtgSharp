@@ -9,6 +9,6 @@ namespace PrtgSharp
         string Name { get; }
         string Value { get; }
         IEnumerable<ChannelProperty> Properties { get; }
-        XElement ToResultElement();
+        XElement ToXElement();
     }
 }

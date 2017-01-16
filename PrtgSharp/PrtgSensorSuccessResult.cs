@@ -28,18 +28,18 @@ namespace PrtgSharp
         public PrtgSensorSuccessResult(string sensorMessage)
             : this(sensorMessage, null) { }
 
-        public XElement Serialize()
+        public XElement SerializeToXElement()
         {
             var errorResult = ValidateOrGetErrorResult();
 
             if (errorResult != null)
             {
-                return errorResult.Serialize();
+                return errorResult.SerializeToXElement();
             }
 
             return new XElement("prtg",
                 Text?.ToXElement(),
-                Channels?.Select(r => r.ToResultElement()));
+                Channels?.Select(r => r.ToXElement()));
         }
 
         private PrtgSensorErrorResult ValidateOrGetErrorResult()
