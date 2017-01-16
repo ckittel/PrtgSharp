@@ -24,7 +24,7 @@ namespace PrtgSharp.Utilities
             return value;
         }
 
-        public static string Truncate(this string value, int length, char finalCharacter)
+        private static string Truncate(this string value, int length, char finalCharacter)
         {
             if (length <= 1)
             {
