@@ -1,2 +1,3 @@
 language: csharp
 solution: PrtgSharp.sln
+ - xbuild /p:Configuration=Release-NoTests PrtgSharp.sln
