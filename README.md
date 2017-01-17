@@ -10,7 +10,9 @@ The library allows you to feed it `Channel` data (and related `ChannelProperties
 
     PM> Install-Package PrtgSharp.Core -Pre
 
-## Example Usage
+## Example Usages
+
+### Success
 ```csharp
 var channels = new List<IChannel>
 {
@@ -28,9 +30,9 @@ var channels = new List<IChannel>
 };
 
 var rpt = new PrtgSensorSuccessResult("Everything Looks Awesome!", channels);
-var output = rpt.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
+var output = rpt.SerializeToXElement().ToString();
 ```
-Produces the following XML output
+Produces the following XML in `output`
 ```xml
 <prtg>
   <text>Everything Looks Awesome!</text>
@@ -56,6 +58,20 @@ Produces the following XML output
   </result>
 </prtg>
 ```
+
+### Failure
+```csharp
+var rpt = new PrtgSensorErrorResult("It's all gone horribly wrong :(");
+var output = rpt.SerializeToXElement().ToString();
+```
+Produces the following XML in `output`
+```xml
+<prtg>
+  <text>It's all gone horribly wrong :(</text>
+  <error>1</error>
+</prtg>
+```
+            
 ## Future Features
 
 * Logging Infrastructure to help debug/monitor
