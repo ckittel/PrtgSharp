@@ -10,6 +10,52 @@ The library allows you to feed it `Channel` data (and related `ChannelProperties
 
     PM> Install-Package PrtgSharp.Core -Pre
 
+## Example Usage
+```csharp
+var channels = new List<IChannel>
+{
+    new Channel("Last Scan Duration", 
+                142.5f, 
+                new[] { ValueUnitProperty.TimeSeconds, SpeedValueDisplayTimeProperty.Minute }),
+
+    new Channel("Velocity (unladen swallow)", 
+                11, 
+                new [] { ValueUnitProperty.Custom, new CustomValueUnitProperty("M/Sec") }),
+
+    new Channel("Widget Size", 
+                415, 
+                new [] { ValueUnitProperty.BytesDisk })
+};
+
+var rpt = new PrtgSensorSuccessResult("Everything Looks Awesome!", channels);
+var output = rpt.SerializeToXElement().ToString(SaveOptions.DisableFormatting);
+```
+Produces the following XML output
+```xml
+<prtg>
+  <text>Everything Looks Awesome!</text>
+  <result>
+    <channel>Last Scan Duration</channel>
+    <value>142.5</value>
+    <unit>TimeSeconds</unit>
+    <speedtime>Minute</speedtime>
+    <float>1</float>
+  </result>
+  <result>
+    <channel>Velocity (unladen swallow)</channel>
+    <value>11</value>
+    <unit>Custom</unit>
+    <customunit>M/Sec</customunit>
+    <float>0</float>
+  </result>
+  <result>
+    <channel>Widget Size</channel>
+    <value>415</value>
+    <unit>BytesDisk</unit>
+    <float>0</float>
+  </result>
+</prtg>
+```
 ## Future Features
 
 * Logging Infrastructure to help debug/monitor
