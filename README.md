@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ckittel/PrtgSharp.svg?branch=master)](https://travis-ci.org/ckittel/PrtgSharp)
+
 # PrtgSharp
 
 A library useful in creating well-formed XML responses for Custom Sensors in [PRTG](https://www.paessler.com/prtg). Specifically it can be used in both the "Advanced EXE/Script Sensor" and "Advanced HTTP Data Sensors."
